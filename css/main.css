@@ -103,6 +103,7 @@ textarea {
 body {
     font-family: 'Georgia', Times, serif;
     background-color: #ffffff;
+    line-height: 1.5;
 }
 h1, 
 h2, 
@@ -122,7 +123,17 @@ h3 {
 h4 {
     font-size: 1.414em;
 }
-
+a {
+    
+    text-decoration: none;
+    color: indianred;
+}
+a:hover {
+    color: red;
+    transition: .1s;
+    border-bottom: 2px red solid;
+    padding-bottom: 2px;
+}
 /****************
  * Layout
  ***************/
@@ -214,14 +225,9 @@ header {
     font-size: .8rem;
     font-weight: 100;
     letter-spacing: 1px;
-    text-decoration: none;
-    color: indianred;
 }
 .top-nav a:hover {
-    color: red;
-    transition: .2s;
-    border-bottom: 2px red solid;
-    padding-bottom: 2px;
+   
 }
 
 .spacer {
