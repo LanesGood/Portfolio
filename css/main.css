@@ -123,9 +123,9 @@ h4 {
     font-size: 1.414em;
 }
 
-/*
+/****************
  * Layout
- */
+ ***************/
 
 .wrapper {
     margin: 2rem 0;
@@ -151,16 +151,28 @@ h4 {
     [class^="col"] {
         flex: 1;
     }
-    .col-4{
+    .col-2 {
+        flex: 16.66%;
+    }
+    .col-3 {
+        flex: 25%;
+    }    
+    .col-4 {
         flex: 33%;
+    }
+    .col-6 {
+        flex: 50%;
     }
 }
 
 
-/*
+/**********************
  * Header
- */
-
+ *********************/
+.logo h3 {
+    display: inline-block;
+    margin: 0 1rem;
+}
 header {
     background-color: #fafbfa;
     min-height: 2rem;
@@ -168,23 +180,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: fixed;
+    width: 100%;
 }
-nav ul {
+
+.top-nav ul {
     display: flex;
     flex-direction: column;
+    padding-right: 4rem;
 }
 @media only screen and (min-width: 53rem) {
-    nav ul {
+    .top-nav ul {
         flex-direction: row;
     }
-    nav li {
+    .top-nav li {
         padding-left: 2rem 
     }
 }
-nav ul li{
+.top-nav ul li{
     list-style: none;
 }
-nav a {
+.top-nav a {
     font-family: sans-serif;
     text-transform: uppercase;
     font-size: 12px;
@@ -193,9 +209,9 @@ nav a {
     text-decoration: none;
 }
 
-
-
-
+.spacer {
+    padding-top: 6rem;
+}
 
 
 
@@ -221,6 +237,11 @@ nav a {
 /*
  * Hide visually and from screen readers
  */
+@media only screen and (max-width: 35rem) {
+    .hide-mobile {
+        display: none;
+    }
+}
 
 .hidden {
     display: none !important;
