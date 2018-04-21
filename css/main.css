@@ -259,7 +259,9 @@ header {
  * Hide visually and from screen readers
  */
 @media only screen and (max-width: 35rem) {
-    .hide-mobile {
+    .hide-mobile,
+    .hide-mobile *,
+    * .hid-mobile {
         display: none !important;
     }
 }
