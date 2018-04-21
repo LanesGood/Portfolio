@@ -169,21 +169,29 @@ h4 {
 /**********************
  * Header
  *********************/
-.logo h3 {
-    display: inline-block;
-    margin: 0 1rem;
-}
+
 header {
     background-color: #fafbfa;
     min-height: 2rem;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: fixed;
     width: 100%;
+    color: indianred;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo h4 {
+    display: inline-block;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
 .top-nav ul {
     display: flex;
     flex-direction: column;
@@ -203,10 +211,17 @@ header {
 .top-nav a {
     font-family: sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: .8rem;
     font-weight: 100;
     letter-spacing: 1px;
     text-decoration: none;
+    color: indianred;
+}
+.top-nav a:hover {
+    color: red;
+    transition: .2s;
+    border-bottom: 2px red solid;
+    padding-bottom: 2px;
 }
 
 .spacer {
