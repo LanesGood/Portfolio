@@ -101,7 +101,7 @@ textarea {
  */
 
 body {
-    font-family: 'Georgia', Times, serif;
+    font-family: 'Lora', Times, serif;
     background-color: #ffffff;
     line-height: 1.5;
 }
@@ -109,7 +109,7 @@ h1,
 h2, 
 h3, 
 h4 {
-    font-family: 'Helvetica', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 h1 {
     font-size: 3.998em;
@@ -196,7 +196,7 @@ header {
     display: flex;
     align-items: center;
 }
-.logo h4 {
+.logo h3 {
     display: inline-block;
     margin-left: 2rem;
     text-transform: uppercase;
@@ -234,10 +234,12 @@ header {
     padding-top: 6rem;
 }
 
+.lead {
+    font-size: 1.12rem;
+    font-weight: 100;
+    color: #000;
 
-
-
-
+}
 
 
 
