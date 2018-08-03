@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+main {
+  padding-top: 12rem;
+}
+.lead {
+  font-family: $text-font-serif;
+  grid-column: span 2;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.7rem;
+
+}

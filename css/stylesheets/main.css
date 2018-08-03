@@ -408,6 +408,14 @@ template {
 html {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 3fr auto; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -439,7 +447,7 @@ body {
 h1,
 h2,
 h3 {
-  font: "Alegreya", "Georgia", "Times", serif; }
+  font-family: "Alegreya", Alegreya, serif; }
 
 /**
  * Clear inner floats
@@ -498,17 +506,88 @@ h3 {
 
 header {
   background-color: #fafbfa;
-  min-height: 2rem;
   padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(1rem, auto);
-  grid-template-areas: "logo logo logo logo" "nav nav nav nav";
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: #ce3939; }
+  position: fixed;
+  width: 100%;
+  color: #ce3939;
+  box-shadow: 0 2px rgba(77, 77, 77, 0.3);
+  z-index: 1000;
+  margin: 0; }
+  header h5 {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 1rem 0 0; }
+  header img {
+    width: 3rem; }
   @media (min-width: 767px) {
     header {
-      grid-template-areas: "logo nav nav nav"; } }
+      min-height: 2rem;
+      flex-direction: row; }
+      header img {
+        width: 5em; }
+      header h5 {
+        margin: 0 0 0 2rem; } }
+
+.top-nav ul {
+  display: flex;
+  -webkit-padding-start: 0; }
+  .top-nav ul li ~ li {
+    padding-left: 2rem; }
+@media (min-width: 767px) {
+  .top-nav {
+    margin-left: auto; }
+    .top-nav ul {
+      flex-direction: row;
+      padding-right: 4rem; } }
+.top-nav li {
+  list-style: none; }
+.top-nav a {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 100;
+  letter-spacing: 1px; }
+  .top-nav a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid #ce3939; }
+
+.grid-wrapper {
+  display: grid;
+  max-width: 1080px;
+  margin: 1rem; }
+  @media (min-width: 767px) {
+    .grid-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      margin: 0 auto; } }
+
+.grid--figure {
+  margin: 0;
+  grid-column: 1/3; }
+  @media (min-width: 767px) {
+    .grid--figure {
+      grid-column: span 1; } }
+  .grid--figure img {
+    width: 100%; }
+
+.footer {
+  display: flex; }
+
+main {
+  padding-top: 12rem; }
+
+.lead {
+  font-family: "Alegreya", Alegreya, serif;
+  grid-column: span 2;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.7rem; }
 
 /*# sourceMappingURL=main.css.map */
