@@ -1,15 +1,42 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-main {
-  padding-top: 12rem;
-}
+
 .lead {
   font-family: $text-font-serif;
   grid-column: span 2;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #000;
+  color: #545454;
   line-height: 1.7rem;
-
+  margin-right: 20vw;
+  margin-bottom: 8rem;
+  @include respond-to(medium) {
+    margin-bottom: 10em;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+.grid--figure {
+  margin: 0;
+  grid-column: span 2;
+  position: relative;
+  transition: all .3s;
+  @include respond-to(small) {
+    grid-column: span 1;
+  }
+  figure {
+    box-shadow: 0px 3px 15px -3px rgba(128,128,128,0.77);
+  }
+  img {
+    width: 100%;
+  }
+  figcaption {
+    position: absolute;
+    top: 0;
+    margin: 2rem 2rem 0;
+  }
+  &:hover {
+    box-shadow: 0px 6px 12px -2px rgba(98,98,98,0.77);
+  }
 }

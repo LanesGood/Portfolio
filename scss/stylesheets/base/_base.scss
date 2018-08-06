@@ -16,6 +16,7 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 3fr auto;
+  justify-content: center;
 }
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
