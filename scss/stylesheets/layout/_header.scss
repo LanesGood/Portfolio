@@ -1,3 +1,62 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+header {
+    background-color: #fafbfa;
+    min-height: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    color: indianred;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo h3 {
+    display: inline-block;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+.top-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-right: 4rem;
+}
+@media only screen and (min-width: 53rem) {
+    .top-nav ul {
+        flex-direction: row;
+    }
+    .top-nav li {
+        padding-left: 2rem
+    }
+}
+.top-nav ul li{
+    list-style: none;
+}
+.top-nav a {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.top-nav a:hover {
+
+}
+
+.spacer {
+    padding-top: 6rem;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.7rem;
+}
