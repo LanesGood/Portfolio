@@ -8,7 +8,8 @@
 
 // 2. Vendors
 @import
-  'vendor/normalize';
+  'vendor/normalize',
+  'vendor/modularscale';
 
 // 3. Base stuff
 @import
@@ -20,6 +21,7 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/grid',
   'layout/footer';
 
 // 5. Components

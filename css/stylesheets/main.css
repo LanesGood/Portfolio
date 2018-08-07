@@ -60,7 +60,7 @@ main {
  * Add the correct margin in IE 8.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 0; }
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -408,6 +408,15 @@ template {
 html {
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 3fr auto;
+  justify-content: center; }
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -434,21 +443,52 @@ a {
  */
 body {
   color: #2a2a2a;
-  font: normal 125%/1.4 "Poppins", "Helvetica", "Arial", sans-serif; }
+  font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5; }
 
 h1,
 h2,
-h3 {
-  font: "Alegreya", "Georgia", "Times", serif; }
+h3,
+h4 {
+  font-family: "Alegreya", Alegreya, serif; }
 
 h1 {
-  font-size: 3.998em; }
+  font-size: 28px;
+  line-height: .9; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h1 {
+      font-size: calc( 28px + 7 * ( ( 100vw - 400px) / 500 ) ); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h1 {
+      font-size: calc( 35px + 31 * ( ( 100vw - 900px) / 300 ) ); } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 66px; } }
 
 h2 {
-  font-size: 2.827em; }
+  font-size: 23px;
+  line-height: 1.3; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h2 {
+      font-size: calc( 23px + 4 * ( ( 100vw - 400px) / 500 ) ); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h2 {
+      font-size: calc( 27px + 14 * ( ( 100vw - 900px) / 300 ) ); } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 41px; } }
 
 h3 {
-  font-size: 1.999em; }
+  font-size: 19px; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h3 {
+      font-size: calc( 19px + 2 * ( ( 100vw - 400px) / 500 ) ); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h3 {
+      font-size: calc( 21px + 5 * ( ( 100vw - 900px) / 300 ) ); } }
+  @media (min-width: 1200px) {
+    h3 {
+      font-size: 26px; } }
 
 h4 {
   font-size: 1.414em; }
@@ -510,13 +550,20 @@ h4 {
 
 header {
   background-color: #fafbfa;
+<<<<<<< HEAD
   min-height: 2rem;
   padding: 1rem;
   display: flex;
+=======
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+>>>>>>> e99f1fd96016268d913a6393f75730880c416d27
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
+<<<<<<< HEAD
   color: indianred; }
 
 .logo {
@@ -559,5 +606,96 @@ header {
   font-weight: 400;
   color: #000;
   line-height: 1.7rem; }
+=======
+  color: #ce3939;
+  box-shadow: 0 2px rgba(77, 77, 77, 0.3);
+  z-index: 1000;
+  margin: 0; }
+  header h5 {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 1rem 0 0; }
+  header img {
+    width: 3rem; }
+  @media (min-width: 767px) {
+    header {
+      min-height: 2rem;
+      flex-direction: row; }
+      header img {
+        width: 5em; }
+      header h5 {
+        margin: 0 0 0 2rem; } }
+
+.top-nav ul {
+  display: flex;
+  -webkit-padding-start: 0; }
+  .top-nav ul li ~ li {
+    padding-left: 2rem; }
+@media (min-width: 767px) {
+  .top-nav {
+    margin-left: auto; }
+    .top-nav ul {
+      flex-direction: row;
+      padding-right: 4rem; } }
+.top-nav li {
+  list-style: none; }
+.top-nav a {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 100;
+  letter-spacing: 2px; }
+  .top-nav a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid #ce3939; }
+
+.grid-wrapper {
+  display: grid;
+  max-width: 1080px;
+  margin: 12rem 1rem;
+  grid-gap: 1.5rem; }
+  @media (min-width: 767px) {
+    .grid-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 10em 1em 0 1em; } }
+
+.footer {
+  display: flex; }
+
+.lead {
+  font-family: "Alegreya", Alegreya, serif;
+  grid-column: span 2;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #545454;
+  line-height: 1.7rem;
+  margin-right: 20vw;
+  margin-bottom: 8rem; }
+  @media (min-width: 992px) {
+    .lead {
+      margin-bottom: 10em;
+      font-size: 1.8rem;
+      line-height: 2rem; } }
+
+.grid--figure {
+  margin: 0;
+  grid-column: span 2;
+  position: relative;
+  transition: all .3s; }
+  @media (min-width: 767px) {
+    .grid--figure {
+      grid-column: span 1; } }
+  .grid--figure figure {
+    box-shadow: 0px 3px 15px -3px rgba(128, 128, 128, 0.77); }
+  .grid--figure img {
+    width: 100%; }
+  .grid--figure figcaption {
+    position: absolute;
+    top: 0;
+    margin: 2rem 2rem 0; }
+  .grid--figure:hover {
+    box-shadow: 0px 6px 12px -2px rgba(98, 98, 98, 0.77); }
+>>>>>>> e99f1fd96016268d913a6393f75730880c416d27
 
 /*# sourceMappingURL=main.css.map */

@@ -8,8 +8,8 @@
 
 /// Regular font family
 /// @type List
-$text-font-sans: 'Poppins', 'Helvetica', 'Arial', sans-serif !default;
-$text-font-serif: 'Alegreya', 'Georgia', 'Times', serif;
+$text-font-sans: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+$text-font-serif: 'Alegreya', Alegreya, serif;
 
 /// Code (monospace) font family
 /// @type List
@@ -55,10 +55,10 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
+  'small'  : ( min-width:  767px ),
+  'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px )
+);
 
 
 
