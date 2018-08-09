@@ -5,6 +5,8 @@
   grid-gap: 1.5rem;
   @include respond-to(small) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(20px, 100px);
+    overflow: hidden;
     margin: 10em 1em 0 1em;
   }
 }

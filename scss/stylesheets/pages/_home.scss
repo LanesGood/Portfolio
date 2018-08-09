@@ -22,10 +22,12 @@
   grid-column: span 2;
   position: relative;
   transition: all .3s;
+  overflow: hidden;
   @include respond-to(small) {
     grid-column: span 1;
   }
   figure {
+    overflow: hidden;
     box-shadow: 0px 3px 15px -3px rgba(128,128,128,0.77);
   }
   img {
