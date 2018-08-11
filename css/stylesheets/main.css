@@ -617,7 +617,6 @@ header {
   @media (min-width: 767px) {
     .grid-wrapper {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: minmax(1fr, 400px);
       margin: 10em 1em 0 1em; } }
 
 .footer {
@@ -642,11 +641,13 @@ header {
   margin: 0;
   grid-column: span 2;
   position: relative;
-  transition: all .3s; }
+  transition: all .3s;
+  overflow: hidden; }
   @media (min-width: 767px) {
     .grid--figure {
       grid-column: span 1; } }
   .grid--figure figure {
+    overflow: hidden;
     box-shadow: 0px 3px 15px -3px rgba(128, 128, 128, 0.77); }
   .grid--figure img {
     max-width: 100%; }
