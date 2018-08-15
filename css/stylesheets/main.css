@@ -605,8 +605,6 @@ header {
   @media (min-width: 767px) {
     .grid-wrapper {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: minmax(20px, 100px);
-      overflow: hidden;
       margin: 10em 1em 0 1em; } }
 
 .footer {
@@ -640,7 +638,7 @@ header {
     overflow: hidden;
     box-shadow: 0px 3px 15px -3px rgba(128, 128, 128, 0.77); }
   .grid--figure img {
-    width: 100%; }
+    max-width: 100%; }
   .grid--figure figcaption {
     position: absolute;
     top: 0;
