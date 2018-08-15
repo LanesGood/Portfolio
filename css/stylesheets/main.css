@@ -415,7 +415,11 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: 3fr auto;
-  justify-content: center; }
+  justify-content: center;
+  border-left: 0.52em solid #ce3939; }
+  @media (min-width: 767px) {
+    body {
+      border-left: 1em solid #ce3939; } }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -448,8 +452,7 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: "Alegreya", Alegreya, serif; }
 
 h1 {
@@ -546,8 +549,8 @@ h3 {
   width: 1px; }
 
 header {
-  background-color: #fafbfa;
-  padding: 1rem;
+  background-color: #fefefe;
+  padding: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -558,7 +561,7 @@ header {
   box-shadow: 0 2px rgba(77, 77, 77, 0.3);
   z-index: 1000;
   margin: 0; }
-  header h5 {
+  header h4 {
     display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -572,7 +575,7 @@ header {
       flex-direction: row; }
       header img {
         width: 5em; }
-      header h5 {
+      header h4 {
         margin: 0 0 0 2rem; } }
 
 .top-nav ul {
@@ -590,12 +593,16 @@ header {
   list-style: none; }
 .top-nav a {
   text-transform: uppercase;
-  font-size: .75rem;
+  font-size: .8rem;
   font-weight: 100;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  background-image: linear-gradient(180deg, transparent 80%, rgba(206, 57, 57, 0.7) 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s ease-out; }
   .top-nav a:hover {
     text-decoration: none;
-    border-bottom: 4px solid #ce3939; }
+    background-size: 100% 100%; }
 
 .grid-wrapper {
   display: grid;
@@ -604,15 +611,47 @@ header {
   grid-gap: 1.5rem; }
   @media (min-width: 767px) {
     .grid-wrapper {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       margin: 10em 1em 0 1em; } }
+  .grid-wrapper article {
+    grid-column: span 6; }
+    @media (min-width: 767px) {
+      .grid-wrapper article {
+        grid-column: span 4; } }
+  .grid-wrapper img {
+    max-width: 100%;
+    object-fit: cover; }
+  .grid-wrapper__fullWidth {
+    grid-column: span 6; }
+  .grid-wrapper__figure {
+    margin: 0;
+    grid-column: span 6;
+    position: relative;
+    transition: all .3s;
+    overflow: hidden; }
+    @media (min-width: 767px) {
+      .grid-wrapper__figure {
+        grid-column: span 3; } }
+    .grid-wrapper__figure figure {
+      overflow: hidden;
+      box-shadow: 0px 3px 15px -3px rgba(128, 128, 128, 0.77); }
+    .grid-wrapper__figure figcaption {
+      position: absolute;
+      top: 0;
+      margin: 2rem 2rem 0; }
+    .grid-wrapper__figure:hover {
+      box-shadow: 0px 6px 12px -2px rgba(98, 98, 98, 0.77); }
+  .grid-wrapper__project-info {
+    grid-column: span 6; }
+    @media (min-width: 767px) {
+      .grid-wrapper__project-info {
+        grid-column: span 2; } }
 
 .footer {
   display: flex; }
 
 .lead {
   font-family: "Alegreya", Alegreya, serif;
-  grid-column: span 2;
   font-size: 1.5rem;
   font-weight: 400;
   color: #545454;
@@ -624,39 +663,5 @@ header {
       margin-bottom: 10em;
       font-size: 1.8rem;
       line-height: 2rem; } }
-
-.grid--figure {
-  margin: 0;
-  grid-column: span 2;
-  position: relative;
-  transition: all .3s;
-  overflow: hidden; }
-  @media (min-width: 767px) {
-    .grid--figure {
-      grid-column: span 1; } }
-  .grid--figure figure {
-    overflow: hidden;
-    box-shadow: 0px 3px 15px -3px rgba(128, 128, 128, 0.77); }
-  .grid--figure img {
-    max-width: 100%; }
-  .grid--figure figcaption {
-    position: absolute;
-    top: 0;
-    margin: 2rem 2rem 0; }
-  .grid--figure:hover {
-    box-shadow: 0px 6px 12px -2px rgba(98, 98, 98, 0.77); }
-  .grid--figure h2 {
-    margin: 0; }
-    .grid--figure h2:after {
-      content: '';
-      width: 30px;
-      height: 1rem;
-      color: red;
-      position: relative;
-      left: -10rem;
-      bottom: 0;
-      z-index: 200; }
-  .grid--figure p {
-    margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
