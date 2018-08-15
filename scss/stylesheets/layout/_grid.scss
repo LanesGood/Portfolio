@@ -1,54 +1,56 @@
 .grid-wrapper {
-  display: grid;
-  max-width: 1080px;
-  margin: 12rem 1rem;
-  grid-gap: 1.5rem;
-  @include respond-to(small) {
-    grid-template-columns: repeat(6, 1fr);
-    margin: 10em 1em 0 1em;
-  }
-
-  article {
-    grid-column: span 6;
+  @supports (display: grid){
+    display: grid;
+    max-width: 1080px;
+    margin: 12rem 1rem;
+    grid-gap: 1.5rem;
     @include respond-to(small) {
-      grid-column: span 4;
+      grid-template-columns: repeat(6, 1fr);
+      margin: 10em 1em 0 1em;
     }
-  }
-  img {
-    max-width: 100%;
-    object-fit: cover;
-  }
 
-  &__fullWidth {
-    grid-column: span 6;
-  }
-  &__figure {
-    margin: 0;
-    grid-column: span 6;
-    position: relative;
-    transition: all .3s;
-    overflow: hidden;
-    @include respond-to(small) {
-      grid-column: span 3;
+    article {
+      grid-column: span 6;
+      @include respond-to(small) {
+        grid-column: span 4;
+      }
     }
-    figure {
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    &__fullWidth {
+      grid-column: span 6;
+    }
+    &__figure {
+      margin: 0;
+      grid-column: span 6;
+      position: relative;
+      transition: all .3s;
       overflow: hidden;
-      box-shadow: 0px 3px 15px -3px rgba(128,128,128,0.77);
-    }
+      @include respond-to(small) {
+        grid-column: span 3;
+      }
+      figure {
+        overflow: hidden;
+        box-shadow: 0px 3px 15px -3px rgba(128,128,128,0.77);
+      }
 
-    figcaption {
-      position: absolute;
-      top: 0;
-      margin: 2rem 2rem 0;
+      figcaption {
+        position: absolute;
+        top: 0;
+        margin: 2rem 2rem 0;
+      }
+      &:hover {
+        box-shadow: 0px 6px 12px -2px rgba(98,98,98,0.77);
+      }
     }
-    &:hover {
-      box-shadow: 0px 6px 12px -2px rgba(98,98,98,0.77);
-    }
-  }
-  &__project-info {
-    grid-column: span 6;
-    @include respond-to(small) {
-      grid-column: span 2;
+    &__project-info {
+      grid-column: span 6;
+      @include respond-to(small) {
+        grid-column: span 2;
+      }
     }
   }
 }
