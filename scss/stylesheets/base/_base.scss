@@ -14,12 +14,15 @@ html {
 }
 body {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: 3fr auto;
-  justify-content: center;
+
   border-left: .52em solid $brand-color;
   @include respond-to(small) {
     border-left: 1em solid $brand-color;
+  }
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: 3fr auto;
+    justify-content: center;
   }
 }
 /**
@@ -40,7 +43,6 @@ body {
 a {
   color: $brand-color;
   text-decoration: none;
-
   @include on-event {
     color: $text-color;
     text-decoration: underline;
