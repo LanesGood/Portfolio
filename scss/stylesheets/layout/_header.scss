@@ -25,15 +25,24 @@ header {
       letter-spacing: 1px;
       margin: 0;
       font-weight: 300;
+      transition: color .2s;
+      &:hover {
+        color: darken($brand-color, 10%);
+      }
     }
+    svg,
     img {
       width: 3rem;
     }
     @include respond-to(small) {
       min-height: 2rem;
       flex-direction: row;
+      svg,
       img {
         width: 5em;
+        g:hover {
+          fill: red;
+        }
       }
       h4 {
         margin: 0 0 0 2rem;

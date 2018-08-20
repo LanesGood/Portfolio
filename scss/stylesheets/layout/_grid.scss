@@ -5,22 +5,25 @@
 .grid-wrapper {
   @supports (display: grid){
     display: grid;
-    max-width: 1200px;
+    max-width: 1090px;
     margin: 12rem 1rem;
     grid-gap: 2rem 3rem;
     @include respond-to(small) {
       grid-template-columns: repeat(6, 1fr);
       margin: 10em 1em 0 1em;
     }
-
-
     img {
       max-width: 100%;
       object-fit: cover;
     }
-
     &__fullWidth {
       grid-column: span 6;
+    }
+    &__halfWidth {
+      grid-column: span 6;
+      @include respond-to(small) {
+        grid-column: span 3;
+      }
     }
     &__figure {
       margin: 0;
@@ -31,11 +34,19 @@
         grid-column: span 3;
         width: 100%;
       }
+      a {
+        color: $text-color !important;
+        text-decoration: none;
+        @include on-event {
+          color: $brand-color;
+          text-decoration: underline;
+        }
+      }
       figcaption h2 {
         background-image: linear-gradient(180deg,transparent 75%, rgba($brand-color, 0.7) 0);
         background-size: 0 100%;
         background-repeat: no-repeat;
-        transition: all 1s cubic-bezier(.23,1,.32,1);
+        transition:background-size 1s cubic-bezier(.23,1,.32,1);
         display: inline-block;
       }
       .thumb-container {
@@ -73,21 +84,11 @@
           transform: scale(1.05);
         }
       }
-
     }
-    article {
+    &__project-description {
       grid-column: span 6;
       @include respond-to(small) {
         grid-column: span 4;
-      }
-      h3 {
-        line-height: 1.4;
-        font-weight: normal;
-        margin: 0 0 1rem;
-        &:first-of-type {
-          border-bottom: 4px solid $brand-color;
-          padding: 1rem 0;
-        }
       }
     }
     &__project-info {

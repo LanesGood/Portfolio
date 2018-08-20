@@ -6,13 +6,13 @@
   font-family: $text-font-serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #545454;
+  color: $mid-grey;
   line-height: 1.7rem;
-  margin-right: 20vw;
   margin-bottom: 8rem;
   @include respond-to(medium) {
-    margin-bottom: 10em;
-    font-size: 1.8rem;
+    margin-bottom: 6em;
+    font-size: 1.6rem;
     line-height: 2rem;
+    margin-right: 30vw;
   }
 }

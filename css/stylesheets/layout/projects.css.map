@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,8BAAG;EACD,cAAc,EAAE,SAAS",
+"sources": ["../../../scss/stylesheets/layout/projects.scss"],
+"names": [],
+"file": "projects.css"
+}
