@@ -7,10 +7,10 @@ Error: Undefined variable: "$mid-grey".
 3:     text-transform: uppercase;
 4:     color: $mid-grey;
 5:     font-size: .89rem;
-6:   }
-7:   p {
-8:     @include respond-to(small) {
-9:       padding-bottom: 2rem;
+6:     margin: 0;
+7:     font-weight: 400;
+8:   }
+9:   p {
 
 Backtrace:
 scss/stylesheets/layout/projects.scss:4
@@ -78,4 +78,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/interna
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$mid-grey\".\A         on line 4 of scss/stylesheets/layout/projects.scss\A \A 1: .grid-wrapper__project-info {\A 2:   h4 {\A 3:     text-transform: uppercase;\A 4:     color: $mid-grey;\A 5:     font-size: .89rem;\A 6:   }\A 7:   p {\A 8:     @include respond-to(small) {\A 9:       padding-bottom: 2rem;"; }
+  content: "Error: Undefined variable: \"$mid-grey\".\A         on line 4 of scss/stylesheets/layout/projects.scss\A \A 1: .grid-wrapper__project-info {\A 2:   h4 {\A 3:     text-transform: uppercase;\A 4:     color: $mid-grey;\A 5:     font-size: .89rem;\A 6:     margin: 0;\A 7:     font-weight: 400;\A 8:   }\A 9:   p {"; }

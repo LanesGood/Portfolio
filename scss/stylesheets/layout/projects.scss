@@ -3,8 +3,11 @@
     text-transform: uppercase;
     color: $mid-grey;
     font-size: .89rem;
+    margin: 0;
+    font-weight: 400;
   }
   p {
+    margin: 0;
     @include respond-to(small) {
       padding-bottom: 2rem;
     }
@@ -17,13 +20,24 @@
     margin: 0 0 1rem;
     &:first-of-type {
       border-bottom: 4px solid $brand-color;
-      padding: 1rem 0;
+      padding: 1rem 0 2rem;
+      margin-bottom: 3rem;
     }
   }
 }
-.project-images figure{
-  display: flex;
+.project-images {
   img {
     max-width: 100%;
   }
+  figcaption {
+    text-align: center;
+    font-size: .9rem;
+    color: $mid-grey;
+  }
+}
+.project-caption {
+  text-align: center;
+  color: $mid-grey;
+  font-size: .85rem;
+  grid-column: span 6;
 }
