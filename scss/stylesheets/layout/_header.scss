@@ -2,8 +2,8 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 header {
-    background-color: #fafbfa;
-    padding: 1rem;
+    background-color: #fefefe;
+    padding: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,12 +14,17 @@ header {
     box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
     z-index: 1000;
     margin: 0;
-    h5 {
+    a {
+      @include on-event {
+        color: $brand-color;
+      }
+    }
+    h4 {
       display: inline-block;
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin: 0;
       font-weight: 300;
-      margin: 1rem 0 0;
     }
     img {
       width: 3rem;
@@ -30,8 +35,9 @@ header {
       img {
         width: 5em;
       }
-      h5 {
+      h4 {
         margin: 0 0 0 2rem;
+        font-weight: 600;
       }
     }
   }
@@ -41,6 +47,9 @@ header {
       display: flex;
       // flex-direction: column;
       -webkit-padding-start: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      margin: 0;
       li~li {
           padding-left: 2rem
       }
@@ -57,14 +66,17 @@ header {
         list-style: none;
     }
     a {
-
         text-transform: uppercase;
-        font-size: .75rem;
+        font-size: .8rem;
         font-weight: 100;
         letter-spacing: 2px;
+        background-image: linear-gradient(180deg,transparent 80%, rgba($brand-color, 0.7) 0);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size .3s ease-out;
         &:hover {
           text-decoration: none;
-          border-bottom: 4px solid $brand-color;
+          background-size: 100% 100%;
         }
       }
     }
