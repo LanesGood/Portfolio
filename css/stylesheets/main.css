@@ -575,15 +575,23 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
-    font-weight: 300; }
+    font-weight: 300;
+    transition: color .2s; }
+    header h4:hover {
+      color: #aa2a2a; }
+  header svg,
   header img {
     width: 3rem; }
   @media (min-width: 767px) {
     header {
       min-height: 2rem;
       flex-direction: row; }
+      header svg,
       header img {
         width: 5em; }
+        header svg g:hover,
+        header img g:hover {
+          fill: red; }
       header h4 {
         margin: 0 0 0 2rem;
         font-weight: 600; } }
@@ -624,7 +632,7 @@ header {
 @supports (display: grid) {
   .grid-wrapper {
     display: grid;
-    max-width: 1200px;
+    max-width: 1090px;
     margin: 12rem 1rem;
     grid-gap: 2rem 3rem; }
     @media (min-width: 767px) {
@@ -636,6 +644,11 @@ header {
       object-fit: cover; }
     .grid-wrapper__fullWidth {
       grid-column: span 6; }
+    .grid-wrapper__halfWidth {
+      grid-column: span 6; }
+      @media (min-width: 767px) {
+        .grid-wrapper__halfWidth {
+          grid-column: span 3; } }
     .grid-wrapper__figure {
       margin: 0;
       grid-column: span 6;
@@ -645,11 +658,17 @@ header {
         .grid-wrapper__figure {
           grid-column: span 3;
           width: 100%; } }
+      .grid-wrapper__figure a {
+        color: #2a2a2a !important;
+        text-decoration: none; }
+        .grid-wrapper__figure a:hover, .grid-wrapper__figure a:active, .grid-wrapper__figure a:focus {
+          color: #ce3939;
+          text-decoration: underline; }
       .grid-wrapper__figure figcaption h2 {
         background-image: linear-gradient(180deg, transparent 75%, rgba(206, 57, 57, 0.7) 0);
         background-size: 0 100%;
         background-repeat: no-repeat;
-        transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: background-size 1s cubic-bezier(0.23, 1, 0.32, 1);
         display: inline-block; }
       .grid-wrapper__figure .thumb-container {
         overflow: hidden;
@@ -677,23 +696,37 @@ header {
           opacity: 1; }
         .grid-wrapper__figure:hover img, .grid-wrapper__figure:active img, .grid-wrapper__figure:focus img {
           transform: scale(1.05); }
-    .grid-wrapper article {
+    .grid-wrapper__project-description {
       grid-column: span 6; }
       @media (min-width: 767px) {
-        .grid-wrapper article {
+        .grid-wrapper__project-description {
           grid-column: span 4; } }
-      .grid-wrapper article h3 {
-        line-height: 1.4;
-        font-weight: normal;
-        margin: 0 0 1rem; }
-        .grid-wrapper article h3:first-of-type {
-          border-bottom: 4px solid #ce3939;
-          padding: 1rem 0; }
     .grid-wrapper__project-info {
       grid-column: span 6; }
       @media (min-width: 767px) {
         .grid-wrapper__project-info {
           grid-column: span 2; } } }
+
+.grid-wrapper__project-info h4 {
+  text-transform: uppercase;
+  color: #999999;
+  font-size: .89rem; }
+@media (min-width: 767px) {
+  .grid-wrapper__project-info p {
+    padding-bottom: 2rem; } }
+
+.grid-wrapper__project-description h3 {
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 0 0 1rem; }
+  .grid-wrapper__project-description h3:first-of-type {
+    border-bottom: 4px solid #ce3939;
+    padding: 1rem 0; }
+
+.project-images figure {
+  display: flex; }
+  .project-images figure img {
+    max-width: 100%; }
 
 .footer {
   display: flex; }
@@ -702,15 +735,15 @@ header {
   font-family: "Alegreya", Alegreya, serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #545454;
+  color: #999999;
   line-height: 1.7rem;
-  margin-right: 20vw;
   margin-bottom: 8rem; }
   @media (min-width: 992px) {
     .lead {
-      margin-bottom: 10em;
-      font-size: 1.8rem;
-      line-height: 2rem; } }
+      margin-bottom: 6em;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      margin-right: 30vw; } }
 
 .grid--figure {
   margin: 0;

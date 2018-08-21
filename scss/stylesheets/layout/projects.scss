@@ -1,0 +1,29 @@
+.grid-wrapper__project-info {
+  h4 {
+    text-transform: uppercase;
+    color: $mid-grey;
+    font-size: .89rem;
+  }
+  p {
+    @include respond-to(small) {
+      padding-bottom: 2rem;
+    }
+  }
+}
+.grid-wrapper__project-description {
+  h3 {
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 0 0 1rem;
+    &:first-of-type {
+      border-bottom: 4px solid $brand-color;
+      padding: 1rem 0;
+    }
+  }
+}
+.project-images figure{
+  display: flex;
+  img {
+    max-width: 100%;
+  }
+}
