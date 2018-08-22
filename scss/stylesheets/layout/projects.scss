@@ -1,3 +1,8 @@
+.project-title {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .grid-wrapper__project-info {
   h4 {
     text-transform: uppercase;
@@ -8,6 +13,7 @@
   }
   p {
     margin: 0;
+    padding-bottom: 1rem;
     @include respond-to(small) {
       padding-bottom: 2rem;
     }
@@ -18,14 +24,16 @@
     line-height: 1.4;
     font-weight: normal;
     margin: 0 0 1rem;
-    &:first-of-type {
-      border-bottom: 4px solid $brand-color;
-      padding: 1rem 0 2rem;
-      margin-bottom: 3rem;
-    }
+  }
+  .overview {
+    border-bottom: 4px solid $brand-color;
+    padding: 1rem 0 2rem;
+    margin-bottom: 3rem;
   }
 }
 .project-images {
+  text-align: center;
+  margin-bottom: 2rem;
   img {
     max-width: 100%;
   }
