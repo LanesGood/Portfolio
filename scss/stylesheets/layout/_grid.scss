@@ -1,19 +1,63 @@
+//First declaring Flexbox fallback
 .grid-wrapper {
+  max-width: 1090px;
   display: flex;
   flex-direction: column;
   margin: 12rem 2rem;
   @include respond-to(small) {
     margin: 10em 1em 0 1em;
+    flex-direction: column;
   }
   img {
     max-width: 100%;
     object-fit: cover;
   }
 }
+.thumb-container {
+  overflow: hidden;
+  position: relative;
+  // box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+  border: 1px solid $light-grey;
+  @include respond-to(small) {
+    max-height:18vw;
+  }
+  &__figure {
+    margin: 0;
+    position: relative;
+    color: $text-color;
+    transition: all 1s cubic-bezier(.23,1,.32,1);
+    @include respond-to(small) {
+      flex: 50%;
+      width: 100%;
+    }
+    figcaption h3 {
+      background-image: linear-gradient(180deg,transparent 55%, rgba($brand-color, 0.4) 0);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition:background-size 1s cubic-bezier(.23,1,.32,1);
+      display: inline-block;
+    }
+    img {
+        position: relative;
+        transition: all 2s cubic-bezier(.23,1,.32,1);
+    }
+    @include on-event {
+      text-decoration: none;
+      figcaption h3 {
+        text-decoration: none;
+        background-size: 100% 100%;
+        color: $brand-color;
+      }
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+//Styles for browsers with support for grid
 .grid-wrapper {
   @supports (display: grid){
     display: grid;
-    max-width: 1090px;
     grid-gap: 2rem 3rem;
     @include respond-to(small) {
       grid-template-columns: repeat(6, 1fr);
@@ -29,42 +73,38 @@
       }
     }
     &__figure {
-      margin: 0;
       grid-column: span 6;
-      position: relative;
-      color: $text-color;
-      transition: all 1s cubic-bezier(.23,1,.32,1);
       @include respond-to(small) {
         grid-column: span 3;
         width: 100%;
       }
-      figcaption h3 {
-        background-image: linear-gradient(180deg,transparent 55%, rgba($brand-color, 0.4) 0);
-        background-size: 0 100%;
-        background-repeat: no-repeat;
-        transition:background-size 1s cubic-bezier(.23,1,.32,1);
-        display: inline-block;
-      }
-      img {
-          position: relative;
-          transition: all 2s cubic-bezier(.23,1,.32,1);
-      }
-      @include on-event {
-        text-decoration: none;
-        figcaption h3 {
-          text-decoration: none;
-          background-size: 100% 100%;
-          color: $brand-color;
-        }
-        .thumb-container {
-          &:after {
-            opacity: 1;
-          }
-        }
-        img {
-          transform: scale(1.05);
-        }
-      }
+      // figcaption h3 {
+      //   background-image: linear-gradient(180deg,transparent 55%, rgba($brand-color, 0.4) 0);
+      //   background-size: 0 100%;
+      //   background-repeat: no-repeat;
+      //   transition:background-size 1s cubic-bezier(.23,1,.32,1);
+      //   display: inline-block;
+      // }
+      // img {
+      //     position: relative;
+      //     transition: all 2s cubic-bezier(.23,1,.32,1);
+      // }
+      // @include on-event {
+      //   text-decoration: none;
+      //   figcaption h3 {
+      //     text-decoration: none;
+      //     background-size: 100% 100%;
+      //     color: $brand-color;
+      //   }
+      //   .thumb-container {
+      //     &:after {
+      //       opacity: 1;
+      //     }
+      //   }
+      //   img {
+      //     transform: scale(1.05);
+      //   }
+      // }
     }
     &__project-description {
       grid-column: span 6;
@@ -78,14 +118,5 @@
         grid-column: span 2;
       }
     }
-  }
-}
-.thumb-container {
-  overflow: hidden;
-  position: relative;
-  // box-shadow: 0 1px 5px rgba(0,0,0,0.15);
-  border: 1px solid $light-grey;
-  @include respond-to(small) {
-    max-height:18vw;
   }
 }
