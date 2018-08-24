@@ -8,7 +8,9 @@
 html {
   box-sizing: border-box;
 }
-
+*::selection {
+  background: rgba($brand-color, 0.7);
+}
 html {
   height: 100%;
 }

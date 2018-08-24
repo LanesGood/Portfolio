@@ -408,6 +408,9 @@ template {
 html {
   box-sizing: border-box; }
 
+*::selection {
+  background: rgba(206, 57, 57, 0.7); }
+
 html {
   height: 100%; }
 
