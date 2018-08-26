@@ -93,6 +93,11 @@
         grid-column: span 3;
         width: 100%;
       }
+      &:nth-child(odd) {
+        @include respond-to(small){
+          padding: 0;
+        }
+      }
       figcaption h3 {
         background-image: linear-gradient(180deg,transparent 55%, rgba($brand-color, 0.4) 0);
         background-size: 0 100%;
