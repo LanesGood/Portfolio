@@ -721,7 +721,7 @@ header {
         width: 100%;
         flex: 50%; } }
     @media (min-width: 767px) {
-      .grid-wrapper__figure ~ .grid-wrapper__figure {
+      .grid-wrapper__figure:nth-child(odd) {
         padding-left: 3em; } }
     .grid-wrapper__figure figcaption h3 {
       background-image: linear-gradient(180deg, transparent 55%, rgba(206, 57, 57, 0.4) 0);
