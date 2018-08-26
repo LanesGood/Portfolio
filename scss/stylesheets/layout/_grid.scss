@@ -5,13 +5,17 @@
   flex-direction: column;
   margin: 12rem 2rem;
   @include respond-to(small) {
-    margin: 10em 1em 0 1em;
+    margin: 10em 1em;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   img {
     max-width: 100%;
     object-fit: cover;
   }
+  // &__fullWidth {
+  //   flex-basis: 100%;
+  // }
   &__figure {
     margin: 0;
     flex: 1;
@@ -21,7 +25,11 @@
     @include respond-to(small) {
       width: 100%;
       flex: 50%;
-      padding-right: 1em;
+    }
+    ~ .grid-wrapper__figure{
+      @include respond-to(small) {
+        padding-left: 3em;
+      }
     }
     figcaption h3 {
       background-image: linear-gradient(180deg,transparent 55%, rgba($brand-color, 0.4) 0);
@@ -114,9 +122,11 @@
       }
     }
     &__project-description {
+
       grid-column: span 6;
       @include respond-to(small) {
         grid-column: 3/7;
+        max-width: none;
       }
     }
     &__project-info {

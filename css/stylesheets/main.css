@@ -409,14 +409,20 @@ html {
   box-sizing: border-box; }
 
 *::selection {
-  background: rgba(206, 57, 57, 0.7); }
+  background: rgba(206, 57, 57, 0.7);
+  color: white; }
 
 html {
   height: 100%; }
 
 body {
   min-height: 100%;
-  border-left: 0.52em solid #ce3939; }
+  border-top: 0.01em solid #ce3939;
+  border-left: 0.52em solid #ce3939;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   @media (min-width: 767px) {
     body {
       border-left: 1em solid #ce3939; } }
@@ -578,6 +584,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
   color: #ce3939;
   box-shadow: 0 2px rgba(77, 77, 77, 0.3);
@@ -604,9 +611,6 @@ header {
       header svg,
       header img {
         width: 5em; }
-        header svg g:hover,
-        header img g:hover {
-          fill: red; }
       header h4 {
         margin: 0 0 0 2rem;
         font-weight: 600; } }
@@ -640,6 +644,59 @@ header {
     text-decoration: none;
     background-size: 100% 100%; }
 
+.project-title {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem; }
+
+.grid-wrapper__project-info {
+  flex: 1;
+  padding-right: 1em; }
+  .grid-wrapper__project-info h4 {
+    text-transform: uppercase;
+    color: #999999;
+    font-size: .89rem;
+    margin: 0;
+    font-weight: 400; }
+  .grid-wrapper__project-info p {
+    margin: 0;
+    padding-bottom: 1rem; }
+    @media (min-width: 767px) {
+      .grid-wrapper__project-info p {
+        padding-bottom: 2rem; } }
+
+@media (min-width: 767px) {
+  .grid-wrapper__project-description {
+    flex: 3;
+    max-width: 75%;
+    margin-left: auto; } }
+.grid-wrapper__project-description h3 {
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 0 0 1rem; }
+.grid-wrapper__project-description .overview {
+  border-bottom: 4px solid #ce3939;
+  padding: 1rem 0 2rem;
+  margin-bottom: 3rem; }
+
+.project-images {
+  text-align: center;
+  margin-bottom: 2rem; }
+  .project-images img {
+    max-width: 100%; }
+  .project-images figcaption {
+    text-align: center;
+    font-size: .9rem;
+    color: #999999; }
+
+.project-caption {
+  text-align: center;
+  color: #999999;
+  font-size: .85rem; }
+  @supports (display: grid) {
+    .project-caption {
+      grid-column: span 6; } }
+
 .grid-wrapper {
   max-width: 1090px;
   display: flex;
@@ -647,8 +704,9 @@ header {
   margin: 12rem 2rem; }
   @media (min-width: 767px) {
     .grid-wrapper {
-      margin: 10em 1em 0 1em;
-      flex-direction: row; } }
+      margin: 10em 1em;
+      flex-direction: row;
+      flex-wrap: wrap; } }
   .grid-wrapper img {
     max-width: 100%;
     object-fit: cover; }
@@ -661,8 +719,10 @@ header {
     @media (min-width: 767px) {
       .grid-wrapper__figure {
         width: 100%;
-        flex: 50%;
-        padding-right: 1em; } }
+        flex: 50%; } }
+    @media (min-width: 767px) {
+      .grid-wrapper__figure ~ .grid-wrapper__figure {
+        padding-left: 3em; } }
     .grid-wrapper__figure figcaption h3 {
       background-image: linear-gradient(180deg, transparent 55%, rgba(206, 57, 57, 0.4) 0);
       background-size: 0 100%;
@@ -736,57 +796,16 @@ header {
       grid-column: span 6; }
       @media (min-width: 767px) {
         .grid-wrapper__project-description {
-          grid-column: 3/7; } }
+          grid-column: 3/7;
+          max-width: none; } }
     .grid-wrapper__project-info {
       grid-column: span 6; }
       @media (min-width: 767px) {
         .grid-wrapper__project-info {
           grid-column: span 2; } } }
 
-.project-title {
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 2rem; }
-
-.grid-wrapper__project-info h4 {
-  text-transform: uppercase;
-  color: #999999;
-  font-size: .89rem;
-  margin: 0;
-  font-weight: 400; }
-.grid-wrapper__project-info p {
-  margin: 0;
-  padding-bottom: 1rem; }
-  @media (min-width: 767px) {
-    .grid-wrapper__project-info p {
-      padding-bottom: 2rem; } }
-
-.grid-wrapper__project-description h3 {
-  line-height: 1.4;
-  font-weight: normal;
-  margin: 0 0 1rem; }
-.grid-wrapper__project-description .overview {
-  border-bottom: 4px solid #ce3939;
-  padding: 1rem 0 2rem;
-  margin-bottom: 3rem; }
-
-.project-images {
-  text-align: center;
-  margin-bottom: 2rem; }
-  .project-images img {
-    max-width: 100%; }
-  .project-images figcaption {
-    text-align: center;
-    font-size: .9rem;
-    color: #999999; }
-
-.project-caption {
-  text-align: center;
-  color: #999999;
-  font-size: .85rem;
-  grid-column: span 6; }
-
 footer {
+  width: 80%;
   margin: 5em 1em .5em;
   display: flex;
   justify-content: space-between; }

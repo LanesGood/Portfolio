@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100%;
     color: $brand-color;
     box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
@@ -40,9 +41,6 @@ header {
       svg,
       img {
         width: 5em;
-        g:hover {
-          fill: red;
-        }
       }
       h4 {
         margin: 0 0 0 2rem;
