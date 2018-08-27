@@ -28,6 +28,7 @@ body {
   align-items: center;
   @supports (display: grid) {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: 3fr auto;
     justify-content: center;
   }

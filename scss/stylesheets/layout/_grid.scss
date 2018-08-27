@@ -5,7 +5,8 @@
   flex-direction: column;
   margin: 12rem 2rem;
   @include respond-to(small) {
-    margin: 10em 1em;
+    margin: 10em auto;
+    padding: 1em;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -54,6 +55,15 @@
       }
     }
   }
+  &__photos {
+    .photo-container {
+      padding: 1em;
+      height: auto;
+      @include respond-to(small){
+        flex: 33%;
+      }
+    }
+  }
 }
 .thumb-container {
   overflow: hidden;
@@ -63,6 +73,8 @@
   @include respond-to(small) {
     max-height:18vw;
   }
+}
+.photo-container {
 
 }
 //Styles for browsers with support for grid
@@ -138,6 +150,20 @@
       grid-column: span 6;
       @include respond-to(small) {
         grid-column: span 2;
+      }
+
+
+    }
+    &__photos {
+      grid-auto-rows: minmax(1fr, auto);
+      .photo-container {
+        grid-column: 2/6;
+        height: auto;
+        padding: 0;
+        @include respond-to (small){
+          grid-column: span 2;
+          grid-row: auto;
+        }
       }
     }
   }

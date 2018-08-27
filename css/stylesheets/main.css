@@ -429,6 +429,7 @@ body {
   @supports (display: grid) {
     body {
       display: grid;
+      grid-template-columns: 100%;
       grid-template-rows: 3fr auto;
       justify-content: center; } }
 
@@ -615,6 +616,9 @@ header {
         margin: 0 0 0 2rem;
         font-weight: 600; } }
 
+#site-logo {
+  line-height: 0; }
+
 .top-nav ul {
   display: flex;
   -webkit-padding-start: 0;
@@ -633,7 +637,7 @@ header {
   list-style: none; }
 .top-nav a {
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: .85rem;
   font-weight: 100;
   letter-spacing: 2px;
   background-image: linear-gradient(180deg, transparent 80%, rgba(206, 57, 57, 0.7) 0);
@@ -648,6 +652,13 @@ header {
   font-weight: 400;
   text-align: center;
   margin-bottom: 2rem; }
+
+.section-overview {
+  padding: 1em; }
+  @media (min-width: 767px) {
+    .section-overview {
+      width: 50%;
+      margin: 0 auto 2em; } }
 
 .grid-wrapper__project-info {
   flex: 1;
@@ -704,7 +715,8 @@ header {
   margin: 12rem 2rem; }
   @media (min-width: 767px) {
     .grid-wrapper {
-      margin: 10em 1em;
+      margin: 10em auto;
+      padding: 1em;
       flex-direction: row;
       flex-wrap: wrap; } }
   .grid-wrapper img {
@@ -740,6 +752,12 @@ header {
         color: #ce3939; }
       .grid-wrapper__figure:hover img, .grid-wrapper__figure:active img, .grid-wrapper__figure:focus img {
         transform: scale(1.05); }
+  .grid-wrapper__photos .photo-container {
+    padding: 1em;
+    height: auto; }
+    @media (min-width: 767px) {
+      .grid-wrapper__photos .photo-container {
+        flex: 33%; } }
 
 .thumb-container {
   overflow: hidden;
@@ -805,7 +823,17 @@ header {
       grid-column: span 6; }
       @media (min-width: 767px) {
         .grid-wrapper__project-info {
-          grid-column: span 2; } } }
+          grid-column: span 2; } }
+    .grid-wrapper__photos {
+      grid-auto-rows: minmax(1fr, auto); }
+      .grid-wrapper__photos .photo-container {
+        grid-column: 2/6;
+        height: auto;
+        padding: 0; }
+        @media (min-width: 767px) {
+          .grid-wrapper__photos .photo-container {
+            grid-column: span 2;
+            grid-row: auto; } } }
 
 footer {
   width: 80%;

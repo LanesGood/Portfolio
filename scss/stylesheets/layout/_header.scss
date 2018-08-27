@@ -48,7 +48,9 @@ header {
       }
     }
   }
-
+#site-logo {
+  line-height: 0;
+}
 .top-nav {
     ul {
       display: flex;
@@ -74,7 +76,7 @@ header {
     }
     a {
         text-transform: uppercase;
-        font-size: .9rem;
+        font-size: .85rem;
         font-weight: 100;
         letter-spacing: 2px;
         background-image: linear-gradient(180deg,transparent 80%, rgba($brand-color, 0.7) 0);

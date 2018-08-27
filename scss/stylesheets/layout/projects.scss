@@ -3,6 +3,14 @@
   text-align: center;
   margin-bottom: 2rem;
 }
+.section-overview {
+  @include respond-to(small) {
+    width: 50%;
+    margin: 0 auto 2em;
+  }
+  padding: 1em;
+
+}
 .grid-wrapper__project-info {
   flex: 1;
   padding-right: 1em;

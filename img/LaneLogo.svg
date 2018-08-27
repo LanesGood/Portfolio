@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="LaneGLogo" stroke="#CE3939" stroke-width="1" fill="none">
+      <rect id="Rectangle-Outer" x="0.5" y="0.5" width="99" height="99"></rect>
+      <path d="M16,99 L16,1" id="Left" stroke-linecap="square"></path>
+      <path d="M99,84 L1,84" id="Bottom" stroke-linecap="square"></path>
+      <path d="M1,16 L99,16" id="Top" stroke-linecap="square"></path>
+      <path d="M84,1 L84,99" id="Right" stroke-linecap="square"></path>
+      <circle id="OvalOuter" cx="50" cy="50" r="49"></circle>
+      <circle id="OvalInner" cx="50" cy="50" r="34"></circle>
+      <rect id="CrossBar" x="60.5" y="43.5" width="39" height="14"></rect>
+  </g>
+</svg>

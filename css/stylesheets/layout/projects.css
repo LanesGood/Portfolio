@@ -1,35 +1,28 @@
 /*
-Error: Undefined variable: "$mid-grey".
-        on line 11 of scss/stylesheets/layout/projects.scss
+Error: Undefined mixin 'respond-to'.
+        on line 7 of scss/stylesheets/layout/projects.scss, in `respond-to'
+        from line 7 of scss/stylesheets/layout/projects.scss
 
-6: .grid-wrapper__project-info {
-7:   flex: 1;
-8:   padding-right: 1em;
-9:   h4 {
-10:     text-transform: uppercase;
-11:     color: $mid-grey;
-12:     font-size: .89rem;
-13:     margin: 0;
-14:     font-weight: 400;
-15:   }
-16:   p {
+2:   font-weight: 400;
+3:   text-align: center;
+4:   margin-bottom: 2rem;
+5: }
+6: .section-overview {
+7:   @include respond-to(small) {
+8:     width: 50%;
+9:     margin: 0 auto 2em;
+10:   }
+11:   padding: 1em;
+12: 
 
 Backtrace:
-scss/stylesheets/layout/projects.scss:11
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/variable.rb:49:in `_perform'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/node.rb:50:in `perform'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
+scss/stylesheets/layout/projects.scss:7:in `respond-to'
+scss/stylesheets/layout/projects.scss:7
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:98:in `block in with_mixin'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `map'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:98:in `with_mixin'
+/usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /usr/local/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
@@ -80,4 +73,4 @@ scss/stylesheets/layout/projects.scss:11
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$mid-grey\".\A         on line 11 of scss/stylesheets/layout/projects.scss\A \A 6: .grid-wrapper__project-info {\A 7:   flex: 1;\A 8:   padding-right: 1em;\A 9:   h4 {\A 10:     text-transform: uppercase;\A 11:     color: $mid-grey;\A 12:     font-size: .89rem;\A 13:     margin: 0;\A 14:     font-weight: 400;\A 15:   }\A 16:   p {"; }
+  content: "Error: Undefined mixin 'respond-to'.\A         on line 7 of scss/stylesheets/layout/projects.scss, in `respond-to'\A         from line 7 of scss/stylesheets/layout/projects.scss\A \A 2:   font-weight: 400;\A 3:   text-align: center;\A 4:   margin-bottom: 2rem;\A 5: }\A 6: .section-overview {\A 7:   @include respond-to(small) {\A 8:     width: 50%;\A 9:     margin: 0 auto 2em;\A 10:   }\A 11:   padding: 1em;\A 12: "; }
