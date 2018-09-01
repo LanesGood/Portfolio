@@ -50,6 +50,10 @@ header {
   }
 #site-logo {
   line-height: 0;
+  margin-left: -.52em;
+  @include respond-to(small) {
+    margin-left: 0;
+  }
 }
 .top-nav {
     ul {
