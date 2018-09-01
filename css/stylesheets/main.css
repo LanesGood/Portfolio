@@ -827,7 +827,7 @@ header {
     .grid-wrapper__photos {
       grid-auto-rows: minmax(1fr, auto); }
       .grid-wrapper__photos .photo-container {
-        grid-column: 2/6;
+        grid-column: 1/7;
         height: auto;
         padding: 0; }
         @media (min-width: 767px) {
