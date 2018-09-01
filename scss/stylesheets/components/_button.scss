@@ -1,3 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn {
+  margin: 1em 0;
+  border: 1px solid $brand-color;
+  padding: 1em;
+  display: inline-block;
+  transition: .3s all ease-out;
+  &:hover {
+    background: $brand-color;
+    color: white;
+    text-decoration: none;
+
+  }
+}

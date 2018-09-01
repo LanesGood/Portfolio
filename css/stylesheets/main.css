@@ -837,9 +837,20 @@ header {
 
 footer {
   width: 80%;
-  margin: 5em 1em .5em;
+  margin: 5em auto;
   display: flex;
   justify-content: space-between; }
+
+.btn {
+  margin: 1em 0;
+  border: 1px solid #ce3939;
+  padding: 1em;
+  display: inline-block;
+  transition: .3s all ease-out; }
+  .btn:hover {
+    background: #ce3939;
+    color: white;
+    text-decoration: none; }
 
 .lead {
   font-family: "Alegreya", Alegreya, serif;
