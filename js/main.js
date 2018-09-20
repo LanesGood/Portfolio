@@ -27,5 +27,3 @@ $(function() {
             break;
     }
 });
-
-$('.imageGallery1 a').simpleLightbox();
