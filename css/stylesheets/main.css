@@ -411,7 +411,7 @@ body.hidden-scroll {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #fff;
+  background: #000;
   opacity: 0.8;
   display: none;
   z-index: 1050; }
@@ -438,7 +438,7 @@ body.hidden-scroll {
     width: 44px;
     line-height: 44px;
     font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-    color: #000;
+    color: #fff;
     font-size: 2rem; }
     .sl-wrapper .sl-close:focus {
       outline: none; }
@@ -448,7 +448,7 @@ body.hidden-scroll {
     top: 30px;
     left: 30px;
     z-index: 1060;
-    color: #000;
+    color: #fff;
     font-size: 1rem; }
   .sl-wrapper .sl-navigation {
     width: 100%;
@@ -464,7 +464,7 @@ body.hidden-scroll {
       display: block;
       z-index: 1060;
       font-family: "Poppins", "Helvetica", "Arial", sans-serif;
-      color: #000; }
+      color: #fff; }
       .sl-wrapper .sl-navigation button.sl-next {
         right: 5px;
         font-size: 2rem; }
@@ -536,7 +536,7 @@ body.hidden-scroll {
       position: absolute;
       bottom: 5px;
       right: 5px;
-      color: #000;
+      color: #fff;
       z-index: 1060; }
 
 .sl-spinner {
