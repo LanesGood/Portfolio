@@ -15,6 +15,7 @@ html {
 html {
   height: 100%;
 }
+// Body is set to grid to ensure footer is always sticky at bottom. Fallback to flex using @support
 body {
   min-height: 100%;
   border-top: .01em solid $brand-color;
@@ -26,12 +27,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 3fr auto;
-    justify-content: center;
-  }
+  // @supports (display: grid) {
+  //   display: grid;
+  //   grid-template-columns: 100%;
+  //   grid-template-rows: 3fr auto;
+  //   justify-content: center;
+  // }
 }
 /**
  * Make all elements from the DOM inherit from the parent box-sizing

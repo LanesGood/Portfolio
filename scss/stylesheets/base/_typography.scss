@@ -6,7 +6,7 @@ body {
   font-family: $text-font-sans;
   line-height: 1.6;
 }
-
+// Modular scale plugin, depends on modularscale folder and _modularscale.scss found in vendor folder
 $modularscale: (
   base: 15px,
   ratio: 1.5,

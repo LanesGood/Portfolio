@@ -38,6 +38,7 @@ header {
     @include respond-to(small) {
       min-height: 2rem;
       flex-direction: row;
+      margin-left: .5em;
       svg,
       img {
         width: 5em;
@@ -73,7 +74,6 @@ header {
           flex-direction: row;
           padding-right: 4rem;
       }
-
     }
     li{
         list-style: none;
@@ -87,9 +87,29 @@ header {
         background-size: 0 100%;
         background-repeat: no-repeat;
         transition: background-size .3s ease-out;
-        &:hover {
+        &:hover,
+        &.active {
+          color: $text-color;
           text-decoration: none;
           background-size: 100% 100%;
         }
       }
     }
+
+.top-nav__secondary {
+  margin: 9rem auto 0;
+  ul {
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    li~li {
+      padding: 0;
+    }
+    @include respond-to(small) {
+      flex-direction: row;
+      li~li {
+        padding-left: 2rem;
+      }
+    }
+  }
+}

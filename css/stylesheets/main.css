@@ -402,6 +402,213 @@ template {
 [hidden] {
   display: none; }
 
+body.hidden-scroll {
+  overflow: hidden; }
+
+.sl-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0.8;
+  display: none;
+  z-index: 1050; }
+
+.sl-wrapper {
+  z-index: 1060; }
+  .sl-wrapper button {
+    border: 0 none;
+    background: transparent;
+    font-size: 28px;
+    padding: 0;
+    cursor: pointer; }
+    .sl-wrapper button:hover {
+      opacity: 0.7; }
+  .sl-wrapper .sl-close {
+    display: none;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 1060;
+    margin-top: -14px;
+    margin-right: -14px;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+    color: #000;
+    font-size: 2rem; }
+    .sl-wrapper .sl-close:focus {
+      outline: none; }
+  .sl-wrapper .sl-counter {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1060;
+    color: #000;
+    font-size: 1rem; }
+  .sl-wrapper .sl-navigation {
+    width: 100%;
+    display: none; }
+    .sl-wrapper .sl-navigation button {
+      position: fixed;
+      top: 50%;
+      margin-top: -22px;
+      height: 44px;
+      width: 22px;
+      line-height: 44px;
+      text-align: center;
+      display: block;
+      z-index: 1060;
+      font-family: "Poppins", "Helvetica", "Arial", sans-serif;
+      color: #000; }
+      .sl-wrapper .sl-navigation button.sl-next {
+        right: 5px;
+        font-size: 2rem; }
+      .sl-wrapper .sl-navigation button.sl-prev {
+        left: 5px;
+        font-size: 2rem; }
+      .sl-wrapper .sl-navigation button:focus {
+        outline: none; }
+      @media (min-width: 35.5em) {
+        .sl-wrapper .sl-navigation button {
+          width: 44px; }
+          .sl-wrapper .sl-navigation button.sl-next {
+            right: 10px;
+            font-size: 3rem; }
+          .sl-wrapper .sl-navigation button.sl-prev {
+            left: 10px;
+            font-size: 3rem; } }
+      @media (min-width: 50em) {
+        .sl-wrapper .sl-navigation button {
+          width: 44px; }
+          .sl-wrapper .sl-navigation button.sl-next {
+            right: 20px;
+            font-size: 3rem; }
+          .sl-wrapper .sl-navigation button.sl-prev {
+            left: 20px;
+            font-size: 3rem; } }
+  .sl-wrapper .sl-image {
+    position: fixed;
+    -ms-touch-action: none;
+    touch-action: none;
+    z-index: 10000; }
+    .sl-wrapper .sl-image img {
+      margin: 0;
+      padding: 0;
+      display: block;
+      border: 0 none; }
+      @media (min-width: 35.5em) {
+        .sl-wrapper .sl-image img {
+          border: 0 none; } }
+      @media (min-width: 50em) {
+        .sl-wrapper .sl-image img {
+          border: 0 none; } }
+    .sl-wrapper .sl-image iframe {
+      background: #000;
+      border: 0 none; }
+      @media (min-width: 35.5em) {
+        .sl-wrapper .sl-image iframe {
+          border: 0 none; } }
+      @media (min-width: 50em) {
+        .sl-wrapper .sl-image iframe {
+          border: 0 none; } }
+    .sl-wrapper .sl-image .sl-caption {
+      display: none;
+      padding: 10px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      .sl-wrapper .sl-image .sl-caption.pos-top {
+        bottom: auto;
+        top: 0; }
+      .sl-wrapper .sl-image .sl-caption.pos-outside {
+        bottom: auto; }
+    .sl-wrapper .sl-image .sl-download {
+      display: none;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: #000;
+      z-index: 1060; }
+
+.sl-spinner {
+  display: none;
+  border: 5px solid #333;
+  border-radius: 40px;
+  height: 40px;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  width: 40px;
+  z-index: 1007;
+  -webkit-animation: pulsate 1s ease-out infinite;
+  -moz-animation: pulsate 1s ease-out infinite;
+  -ms-animation: pulsate 1s ease-out infinite;
+  -o-animation: pulsate 1s ease-out infinite;
+  animation: pulsate 1s ease-out infinite; }
+
+.sl-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+@-moz-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+@-o-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+@-ms-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
 /**
  * Set up a decent box model on the root element
  */
@@ -426,12 +633,6 @@ body {
   @media (min-width: 767px) {
     body {
       border-left: 1em solid #ce3939; } }
-  @supports (display: grid) {
-    body {
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 3fr auto;
-      justify-content: center; } }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -608,7 +809,8 @@ header {
   @media (min-width: 767px) {
     header {
       min-height: 2rem;
-      flex-direction: row; }
+      flex-direction: row;
+      margin-left: .5em; }
       header svg,
       header img {
         width: 5em; }
@@ -648,9 +850,24 @@ header {
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: background-size .3s ease-out; }
-  .top-nav a:hover {
+  .top-nav a:hover, .top-nav a.active {
+    color: #2a2a2a;
     text-decoration: none;
     background-size: 100% 100%; }
+
+.top-nav__secondary {
+  margin: 9rem auto 0; }
+  .top-nav__secondary ul {
+    flex-direction: column;
+    padding: 0;
+    text-align: center; }
+    .top-nav__secondary ul li ~ li {
+      padding: 0; }
+    @media (min-width: 767px) {
+      .top-nav__secondary ul {
+        flex-direction: row; }
+        .top-nav__secondary ul li ~ li {
+          padding-left: 2rem; } }
 
 .project-title {
   font-weight: 400;
@@ -829,6 +1046,7 @@ header {
         .grid-wrapper__project-info {
           grid-column: span 2; } }
     .grid-wrapper__photos {
+      margin-top: 5em;
       grid-auto-rows: minmax(1fr, auto); }
       .grid-wrapper__photos .photo-container {
         grid-column: 1/7;
@@ -839,9 +1057,14 @@ header {
             grid-column: span 2;
             grid-row: auto; } } }
 
+#Moth,
+#Guinea,
+#India {
+  display: none; }
+
 footer {
   width: 80%;
-  margin: 5em auto;
+  margin: 5em auto 0;
   display: flex;
   justify-content: space-between; }
 
