@@ -5,4 +5,7 @@
 }
 .graphic-design {
   margin-top: 10rem;
+  .photo-container img {
+    box-shadow: 1px 2px 4px rgba($text-color, .4);
+  }
 }
