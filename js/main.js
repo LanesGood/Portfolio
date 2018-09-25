@@ -1,4 +1,8 @@
 $(function() {
+    $('#menuIcon').click(function(e){
+      e.preventDefault();
+      $('.top-nav ul').slideToggle('slow');
+    });
     $('.top-nav__secondary a').click(function() {
         var $linkClicked = $(this).attr('href');
         document.location.hash = $linkClicked;
@@ -6,7 +10,7 @@ $(function() {
             $(".top-nav__secondary a").removeClass("active");
             $(this).addClass("active");
             $('main').hide();
-            $($linkClicked).fadeIn().css('display', 'grid');
+            $($linkClicked).fadeIn().css('display', 'flex').css('display', 'grid');
             return false;
         }
         else {

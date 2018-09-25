@@ -2,99 +2,123 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 header {
-    background-color: #fefefe;
-    padding: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: $brand-color;
-    box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
-    z-index: 1000;
-    margin: 0;
-    a {
-      @include on-event {
-        color: $brand-color;
-      }
-    }
-    h4 {
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0;
-      font-weight: 300;
-      transition: color .2s;
-      &:hover {
-        color: darken($brand-color, 10%);
-      }
-    }
-    svg,
-    img {
-      width: 3rem;
-    }
-    @include respond-to(small) {
-      min-height: 2rem;
-      flex-direction: row;
-      margin-left: .5em;
-      svg,
-      img {
-        width: 5em;
-      }
-      h4 {
-        margin: 0 0 0 2rem;
-        font-weight: 600;
-      }
+  background-color: #fefefe;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: $brand-color;
+  box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
+  z-index: 1000;
+  margin: 0;
+  margin-left: .25em;
+  flex-wrap: wrap;
+  a {
+    @include on-event {
+      color: darken($brand-color, 10%);
     }
   }
+  h4 {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 300;
+    transition: color .2s;
+    &:hover {
+      color: darken($brand-color, 10%);
+    }
+  }
+  @include respond-to(small) {
+    // flex-direction: column;
+    min-height: 2rem;
+    flex-direction: row;
+    margin-left: .5em;
+    flex-wrap: wrap;
+    h4 {
+      margin: 0 0 0 2rem;
+      font-weight: 600;
+    }
+  }
+}
 #site-logo {
   line-height: 0;
-  margin-left: -.52em;
-  @include respond-to(small) {
-    margin-left: 0;
+  width: 3.5rem;
+  @include respond-to (small) {
+    width: 5rem;
+  }
+}
+#menuIcon {
+  @include respond-to(small){
+    display: none;
+  }
+  margin-left: auto;
+  margin-right: 1em;
+  z-index: 1000;
+  img {
+    width: 2rem;
   }
 }
 .top-nav {
+  flex-basis:100%;
+  ul {
+    position: relative;
+    top: -2.5rem;
+    flex-direction: column;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin: 0;
+    text-align: center;
+  }
+  @include respond-to(small) {
+    margin-left: auto;
+    flex-basis: auto;
     ul {
-      display: flex;
-      // flex-direction: column;
-      -webkit-padding-start: 0;
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
-      margin: 0;
+      display: flex !important;
+      top: 0;
+      flex-direction: row;
+      padding-right: 1rem;
       li~li {
           padding-left: 2rem
       }
     }
-    @include respond-to(small) {
-      margin-left: auto;
-      ul {
-          flex-direction: row;
-          padding-right: 4rem;
-      }
+  }
+  @include respond-to(medium) {
+    ul {
+      padding-right: 4rem;
     }
-    li{
-        list-style: none;
-    }
-    a {
-        text-transform: uppercase;
-        font-size: .85rem;
-        font-weight: 100;
-        letter-spacing: 2px;
-        background-image: linear-gradient(180deg,transparent 80%, rgba($brand-color, 0.7) 0);
-        background-size: 0 100%;
-        background-repeat: no-repeat;
-        transition: background-size .3s ease-out;
-        &:hover,
-        &.active {
-          color: $text-color;
-          text-decoration: none;
-          background-size: 100% 100%;
+  }
+  li{
+      list-style: none;
+      &:first-child {
+        margin-bottom: 2rem;
+        h4 {
+          border-bottom: 1px solid $brand-color;
+          padding-bottom: 2rem;
         }
       }
+  }
+  a {
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 100;
+      letter-spacing: 2px;
+      background-image: linear-gradient(180deg,transparent 80%, rgba($brand-color, 0.7) 0);
+      background-size: 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size .3s ease-out;
+      &:hover,
+      &.active {
+        color: $text-color;
+        text-decoration: none;
+        background-size: 100% 100%;
+      }
     }
+  }
 
 .top-nav__secondary {
   margin: 9rem auto 0;
@@ -102,8 +126,12 @@ header {
     flex-direction: column;
     padding: 0;
     text-align: center;
+    top: 0;
     li~li {
       padding: 0;
+    }
+    li:first-child {
+      margin: 0;
     }
     @include respond-to(small) {
       flex-direction: row;

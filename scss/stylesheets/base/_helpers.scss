@@ -59,3 +59,8 @@
     display: none;
   }
 }
+.hide-wide {
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}

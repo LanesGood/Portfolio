@@ -14,6 +14,9 @@
     max-width: 100%;
     object-fit: cover;
   }
+  &__fullWidth {
+    flex-basis: 100%;
+  }
   // .grid-wrapper__figure holds all portfolio images on homepage
   &__figure {
     margin: 0;
