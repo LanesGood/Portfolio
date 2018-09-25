@@ -1101,7 +1101,8 @@ footer {
   width: 80%;
   margin: 5em auto 0;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-basis: auto; }
 
 .btn {
   margin: 1em 0;
