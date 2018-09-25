@@ -791,11 +791,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  width: calc(100% - 1rem);
   color: #ce3939;
   box-shadow: 0 2px rgba(77, 77, 77, 0.3);
   z-index: 1000;
   margin: 0;
-  margin-left: .25em;
   flex-wrap: wrap; }
   header a:hover, header a:active, header a:focus {
     color: #aa2a2a; }
@@ -812,7 +812,6 @@ header {
     header {
       min-height: 2rem;
       flex-direction: row;
-      margin-left: .5em;
       flex-wrap: wrap; }
       header h4 {
         margin: 0 0 0 2rem;
@@ -1092,6 +1091,9 @@ header {
 #Guinea,
 #India {
   display: none; }
+
+.graphic-design {
+  margin-top: 10rem; }
 
 footer {
   width: 80%;

@@ -10,11 +10,12 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  width: calc(100% - 1rem);
   color: $brand-color;
   box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
   z-index: 1000;
   margin: 0;
-  margin-left: .25em;
+  // margin-left: .25em;
   flex-wrap: wrap;
   a {
     @include on-event {
@@ -36,7 +37,7 @@ header {
     // flex-direction: column;
     min-height: 2rem;
     flex-direction: row;
-    margin-left: .5em;
+    // margin-left: .5em;
     flex-wrap: wrap;
     h4 {
       margin: 0 0 0 2rem;
