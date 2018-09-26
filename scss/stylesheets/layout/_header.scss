@@ -10,7 +10,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  width: calc(100% - 1rem);
+  width: calc(100% - .5rem);
   color: $brand-color;
   box-shadow: 0 2px hsla(0, 0, 30%, 0.3);
   z-index: 1000;
@@ -39,6 +39,7 @@ header {
     flex-direction: row;
     // margin-left: .5em;
     flex-wrap: wrap;
+    width: calc(100% - 1rem);
     h4 {
       margin: 0 0 0 2rem;
       font-weight: 600;

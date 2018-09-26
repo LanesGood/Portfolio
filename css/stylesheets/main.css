@@ -791,7 +791,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  width: calc(100% - 1rem);
+  width: calc(100% - .5rem);
   color: #ce3939;
   box-shadow: 0 2px rgba(77, 77, 77, 0.3);
   z-index: 1000;
@@ -812,7 +812,8 @@ header {
     header {
       min-height: 2rem;
       flex-direction: row;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      width: calc(100% - 1rem); }
       header h4 {
         margin: 0 0 0 2rem;
         font-weight: 600; } }
