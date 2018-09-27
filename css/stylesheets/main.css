@@ -973,7 +973,7 @@ header {
     max-width: 100%;
     object-fit: cover; }
   .grid-wrapper__fullWidth {
-    flex-basis: 100%; }
+    width: 100%; }
   .grid-wrapper__figure {
     margin: 0;
     flex: 1;
