@@ -13,7 +13,7 @@ $.fn.simpleLightbox = function( options )
 	var options = $.extend({
 		sourceAttr: 'href',
 		overlay: true,
-		spinner: true,
+		spinner: false,
 		nav: true,
 		navText: ['&lsaquo;', '&rsaquo;'],
 		captions: true,
@@ -40,7 +40,7 @@ $.fn.simpleLightbox = function( options )
 		widthRatio: 0.8,
 		heightRatio: 0.9,
 		scaleImageToRatio: false,
-		disableRightClick: false,
+		disableRightClick: true,
 		disableScroll: true,
 		alertError: true,
 		alertErrorMessage: 'Image not found, next image will be loaded',
