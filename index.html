@@ -11,7 +11,9 @@
         <link rel="apple-touch-icon" href="icon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700|Poppins:300,400,400i,700" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trirong&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="css/stylesheets/main.css">
     </head>
@@ -20,123 +22,38 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
         <header>
-          <a href="./" id="site-logo">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="LaneGLogo" stroke="#CE3939" stroke-width="1" fill="none">
-                  <rect id="Rectangle-Outer" x="0.5" y="0.5" width="99" height="99"></rect>
-                  <path d="M16,99 L16,1" id="Left" stroke-linecap="square"></path>
-                  <path d="M99,84 L1,84" id="Bottom" stroke-linecap="square"></path>
-                  <path d="M1,16 L99,16" id="Top" stroke-linecap="square"></path>
-                  <path d="M84,1 L84,99" id="Right" stroke-linecap="square"></path>
-                  <circle id="OvalOuter" cx="50" cy="50" r="49"></circle>
-                  <circle id="OvalInner" cx="50" cy="50" r="34"></circle>
-                  <rect id="CrossBar" x="60.5" y="43.5" width="39" height="14"></rect>
-              </g>
-            </svg>
-          </a>
-          <a class="hide-mobile" href="./"><h4>Lane Goodman</h4></a>
-          <a href="#" id="menuIcon" class="hide-wide"><img src="img/menuIcon.svg" alt=""></a>
-          <nav class="top-nav">
-            <ul class="hide-mobile">
-              <li class="hide-wide"><h4>Lane Goodman</h4></li>
-              <li><a href="./">UX/UI Design</a></li>
-              <li><a href="graphicdesign">Graphic Design</a></li>
-              <li><a href="photography">Photography</a></li>
-              <li><a href="about">About</a></li>
-            </ul>
-          </nav>
+          <div class="header--inner">
+            <a href="./" id="site-logo">
+              <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="LaneGLogo" stroke="#CE3939" stroke-width="1" fill="none">
+                    <rect id="Rectangle-Outer" x="0.5" y="0.5" width="99" height="99"></rect>
+                    <path d="M16,99 L16,1" id="Left" stroke-linecap="square"></path>
+                    <path d="M99,84 L1,84" id="Bottom" stroke-linecap="square"></path>
+                    <path d="M1,16 L99,16" id="Top" stroke-linecap="square"></path>
+                    <path d="M84,1 L84,99" id="Right" stroke-linecap="square"></path>
+                    <circle id="OvalOuter" cx="50" cy="50" r="49"></circle>
+                    <circle id="OvalInner" cx="50" cy="50" r="34"></circle>
+                    <rect id="CrossBar" x="60.5" y="43.5" width="39" height="14"></rect>
+                </g>
+              </svg>
+            </a>
+            <a href="./"><h4>Lane Goodman</h4></a>
+          </div>
         </header>
         <main class="grid-wrapper">
-
             <div class="grid-wrapper__fullWidth">
-                <h2>Hi, I'm Lane</h2>
-                <p class="lead">a designer focused on helping mission-driven organizations and brands elevate their visual design and online experiences to inspire action and advocate for social change</p>
+                <h1>Hi, I'm Lane</h1>
+                <p>a user interface designer working at <a href="https://developmentseed.org">Development Seed</a> in Washington DC</p>
             </div>
-          <a href="/mockelection" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/nspme_home.jpg" alt="Liquid Labs">
-              </div>
-              <figcaption>
-                <h3>National Mock Election</h3>
-                <p>The nation's largest student civics project</p>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="/swhr" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/SWHR_hifi.jpg" alt="">
-              </div>
-              <figcaption>
-                <h3>Society for Women's Health Research</h3>
-                <p>UX and UI redesign for a health research & advocacy non-profit</p>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="/harvardwla" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/Harvard1.JPG" alt="Havard Women's Law Association">
-              </div>
-              <figcaption>
-                <h3>Harvard Women's Law Association</h3>
-                <p>A new site for the oldest women's law student group</p>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="/chmi5" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/CHMIatFive.jpg" alt="">
-              </div>
-              <figcaption>
-                <h3>CHMI at Five</h3>
-                <p>An online progress report</p>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="/liquidlabs" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/LiqLab_grid.jpg" alt="Liquid Labs">
-              </div>
-              <figcaption>
-                <h3>Liquid Labs</h3>
-                <p>The full body juice experience</p>
-              </figcaption>
-            </figure>
-          </a>
-          <a href="/lavender" class="grid-wrapper__figure">
-            <figure>
-              <div class="thumb-container">
-                <img src="img/Lavender_1.jpg" alt="">
-              </div>
-              <figcaption>
-                <h3>Lavender Ceiling</h3>
-                <p>Workplace reviews for the LGBTQ community</p>
-              </figcaption>
-            </figure>
-          </a>
         </main>
-        <footer>
-          <p>
-            &copy;2018 Lane Goodman
-          </p>
+        <footer class='container'>
+          <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Lane Goodman</p>
           <p><a href="mailto:goodman.ls@gmail.com">goodman.ls@gmail.com</a></p>
         </footer>
 
 
 
-
-
-
-
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script> -->
-        <script src="js/main.js"></script>
 
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
