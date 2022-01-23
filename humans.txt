@@ -4,13 +4,3 @@
 # TEAM
 
     Lane Goodman - designer and developer - LanesGood
-
-# THANKS
-
-    <name>
-
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    jQuery, Modernizr, Normalize.css
-    Modular Scale
